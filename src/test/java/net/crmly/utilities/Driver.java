@@ -1,6 +1,6 @@
 package net.crmly.utilities;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,33 +11,26 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-import java.util.concurrent.TimeUnit;
-
 public class Driver {
+    private Driver() {
 
-    private Driver() {}
+    }
 
     private static WebDriver driver;
 
     public static WebDriver get() {
+        // Test
         if (driver == null) {
+            // this line will tell which browser should open based on the value from properties file
             String browser = ConfigurationReader.get("browser");
             switch (browser) {
                 case "chrome":
-                    ChromeOptions handlingSSL = new ChromeOptions();
-                    handlingSSL.setAcceptInsecureCerts(true);
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver(handlingSSL);
-                    driver.manage().window().maximize();
-                    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+                    driver = new ChromeDriver();
                     break;
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
-                    break;
-                case "chrome-eager":
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver(new ChromeOptions().setPageLoadStrategy(PageLoadStrategy.EAGER));
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
@@ -68,6 +61,7 @@ public class Driver {
                     driver = new SafariDriver();
                     break;
             }
+
         }
 
         return driver;
