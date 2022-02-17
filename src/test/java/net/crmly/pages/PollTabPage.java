@@ -29,6 +29,9 @@ public class PollTabPage extends BasePage {
     @FindBy(className = "popup-window-close-icon")
     public WebElement closeTab;
 
+    @FindBy (css = "div#feed-add-post-destination-container")
+    public WebElement employeesBox;
+
 
 
     public void actualtitle() {
@@ -36,4 +39,5 @@ public class PollTabPage extends BasePage {
         String actualTitle = Driver.get().getTitle();
         Assert.assertEquals("(10) Portal",actualTitle);
     }
+
 }

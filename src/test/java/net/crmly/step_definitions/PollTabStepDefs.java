@@ -10,6 +10,9 @@ import net.crmly.utilities.BrowserUtils;
 import net.crmly.utilities.ConfigurationReader;
 import net.crmly.utilities.Driver;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class PollTabStepDefs {
 PollTabPage pollTabPage = new PollTabPage();
@@ -59,7 +62,13 @@ PollTabPage pollTabPage = new PollTabPage();
     }
     @Then("verify the selected contacts")
     public void verify_the_selected_contacts() {
+        BrowserUtils.waitFor(2);
+       Assert.assertTrue.
+
+
 
 
     }
+
+
 }

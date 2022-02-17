@@ -12,3 +12,5 @@ Feature: Selecting multiple contacts
     And the user selects multiple contacts from Employees and Departments contact lists
     And the user closes the contact lists window
     Then verify the selected contacts
+
+
