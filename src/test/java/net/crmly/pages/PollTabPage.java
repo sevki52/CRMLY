@@ -6,6 +6,8 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class PollTabPage extends BasePage {
 
     @FindBy(id = "feed-add-post-form-tab-vote")
@@ -29,8 +31,29 @@ public class PollTabPage extends BasePage {
     @FindBy(className = "popup-window-close-icon")
     public WebElement closeTab;
 
-    @FindBy (css = "div#feed-add-post-destination-container")
-    public WebElement employeesBox;
+    @FindBy (css = "span#feed-add-post-destination-item")
+    public List<WebElement> employeesBox;
+
+    @FindBy(css = "span#bx-b-link-blogPostForm")
+    public WebElement attachBtn;
+
+    @FindBy(id = "linkidPostFormLHE_blogPostForm-text")
+    public WebElement linkTest;
+
+    @FindBy(id = "linkidPostFormLHE_blogPostForm-href")
+    public WebElement linkUrl;
+
+    @FindBy(id = "undefined")
+    public WebElement saveBtn;
+
+    @FindBy(id = "bx-b-mention-blogPostForm")
+    public WebElement addMention;
+    @FindBy(className = "bx-finder-box-item-t7-name")
+    public WebElement firstMention;
+    @FindBy(css = "a[href='#U693']")
+    public WebElement secondMention;
+
+
 
 
 
@@ -39,5 +62,7 @@ public class PollTabPage extends BasePage {
         String actualTitle = Driver.get().getTitle();
         Assert.assertEquals("(10) Portal",actualTitle);
     }
+
+
 
 }

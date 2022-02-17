@@ -36,7 +36,7 @@ PollTabPage pollTabPage = new PollTabPage();
     }
     @And("the user  clicks All employees under the pool tab")
     public void the_user_clicks_All_employees_under_the_pool_tab() {
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitForClickablility(pollTabPage.allEmployeesBtn,5);
         pollTabPage.allEmployeesBtn.click();
     }
     @And("the user clicks on employees and departments on the right side")
@@ -60,12 +60,12 @@ PollTabPage pollTabPage = new PollTabPage();
         pollTabPage.closeTab.click();
 
     }
-    @Then("verify the selected contacts")
-    public void verify_the_selected_contacts() {
-        BrowserUtils.waitFor(2);
-       Assert.assertTrue.
-
-
+    @Then("verify the contacts in the employee box")
+    public void verify_the_contacts_in_the_employee_box(List<String> expectedContacts) {
+        List<String> actualContacts = BrowserUtils.getElementsText(new PollTabPage().employeesBox);
+        Assert.assertNotEquals(expectedContacts, actualContacts);
+        System.out.println(actualContacts);
+        BrowserUtils.waitFor(5);
 
 
     }
