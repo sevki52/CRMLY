@@ -14,16 +14,16 @@ public class Q_AsStepDefs {
 
     @When("the user writes message title")
     public void the_user_writes_message_title() {
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(3);
         Driver.get().switchTo().frame(0);
         pollTabPage.messageBody.clear();
-        pollTabPage.messageBody.sendKeys("Questions and Answers");
+        pollTabPage.messageBody.sendKeys("Questions and answers");
         Driver.get().switchTo().defaultContent();
     }
 
     @And("the user clicks Add question button")
     public void the_user_clicks_Add_question_button() {
-        BrowserUtils.waitFor(4);
+        BrowserUtils.waitFor(5);
         BrowserUtils.scrollToElement(pollTabPage.addQuestionBtn);
         pollTabPage.addQuestionBtn.click();
         BrowserUtils.waitFor(2);
@@ -46,11 +46,11 @@ public class Q_AsStepDefs {
 
     }
 
-//    @When("the user clicks Send button")
-//    public void the_user_clicks_Send_button() {
-//        pollTabPage.sendBtn.click();
-//        BrowserUtils.waitFor(10);
-//    }
+    @When("the user clicks Send button")
+    public void the_user_clicks_Send_button() {
+        pollTabPage.sendBtn.click();
+        BrowserUtils.waitFor(5);
+    }
 
     @Then("verify the message box")
     public void verify_the_message_box() {

@@ -93,6 +93,12 @@ public class PollTabPage extends BasePage {
     @FindBy(xpath = "//*[@id='votes-ac3ab09e1ab5bccbdfe6e02e0dec8cff']")
     public WebElement questionBox;
 
+    @FindBy(css = "#multi_0")
+    public  WebElement checkBoxBtn1;
+    @FindBy(css = "#multi_1")
+    public  WebElement checkBoxBtn2;
+
+
 
     public void actualtitle() {
         BrowserUtils.waitFor(3);
