@@ -7,14 +7,10 @@ import net.crmly.pages.PollTabPage;
 import net.crmly.utilities.BrowserUtils;
 import net.crmly.utilities.Driver;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 
-import java.util.concurrent.TimeUnit;
 
 public class Q_AsStepDefs {
     PollTabPage pollTabPage = new PollTabPage();
-    WebDriver driver;
 
     @When("the user writes message title")
     public void the_user_writes_message_title() {
@@ -23,7 +19,7 @@ public class Q_AsStepDefs {
         pollTabPage.messageBody.clear();
         pollTabPage.messageBody.sendKeys("Questions and Answers");
         Driver.get().switchTo().defaultContent();
-     }
+    }
 
     @And("the user clicks Add question button")
     public void the_user_clicks_Add_question_button() {
@@ -32,6 +28,7 @@ public class Q_AsStepDefs {
         pollTabPage.addQuestionBtn.click();
         BrowserUtils.waitFor(2);
     }
+
     @And("the user adds questions")
     public void the_user_adds_questions() {
         BrowserUtils.waitFor(1);
@@ -39,6 +36,7 @@ public class Q_AsStepDefs {
         BrowserUtils.waitFor(1);
         pollTabPage.addQuestionTwo.sendKeys("Where are you from?");
     }
+
     @And("the user gives multiple answers")
     public void the_user_gives_multiple_answers() {
         pollTabPage.q1Ans1.sendKeys("Mike");
@@ -47,11 +45,13 @@ public class Q_AsStepDefs {
         pollTabPage.q2AnswerTwo.sendKeys("Frankfurt");
 
     }
+
     @When("the user clicks Send button")
     public void the_user_clicks_Send_button() {
         pollTabPage.sendBtn.click();
         BrowserUtils.waitFor(10);
     }
+
     @Then("verify the message box")
     public void verify_the_message_box() {
         Assert.assertTrue(pollTabPage.message.isDisplayed());

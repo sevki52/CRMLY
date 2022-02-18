@@ -11,8 +11,6 @@ import net.crmly.utilities.ConfigurationReader;
 import net.crmly.utilities.Driver;
 import org.junit.Assert;
 
-import java.security.Key;
-
 public class AddMentionStepDefs {
     PollTabPage pollTabPage = new PollTabPage();
 
@@ -28,11 +26,13 @@ public class AddMentionStepDefs {
         pollTabPage.pollTab.click();
         BrowserUtils.waitFor(3);
     }
+
     @And("the user clicks on the Add mention.")
     public void the_user_clicks_on_the_Add_mention() {
         pollTabPage.addMention.click();
         BrowserUtils.waitFor(3);
     }
+
     @And("the user selects by clicking on employees from Recent.")
     public void user_selects_by_clicking_on_employees_from_Recent() {
         BrowserUtils.waitFor(1);
@@ -42,6 +42,7 @@ public class AddMentionStepDefs {
         pollTabPage.secondMention.click();
         BrowserUtils.waitFor(5);
     }
+
     @Then("verify selected users both on Message Title and To sections.")
     public void verify_selected_users_both_on_Message_Title_and_To_sections() {
         String actualMtn = "Cristopher Debua Mike Smith";

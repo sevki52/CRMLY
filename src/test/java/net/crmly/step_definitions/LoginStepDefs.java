@@ -10,7 +10,7 @@ import net.crmly.utilities.Driver;
 import org.junit.Assert;
 
 public class LoginStepDefs {
-     LoginPage loginPage = new LoginPage();
+    LoginPage loginPage = new LoginPage();
 
     @Given("the user navigates to the login page")
     public void the_user_navigates_to_the_login_page() throws InterruptedException {
@@ -29,14 +29,15 @@ public class LoginStepDefs {
 
     @When("the user clicks log in button")
     public void the_user_clicks_log_in_button() throws InterruptedException {
-    loginPage.loginBtn.click();
+        loginPage.loginBtn.click();
 
     }
+
     @Then("the user should have logged in Portal")
     public void the_user_should_have_logged_in_Portal() throws InterruptedException {
         BrowserUtils.waitFor(2);
         String actualTitle = Driver.get().getTitle();
-        Assert.assertEquals("(10) Portal",actualTitle);
+        Assert.assertEquals("(10) Portal", actualTitle);
 
     }
 

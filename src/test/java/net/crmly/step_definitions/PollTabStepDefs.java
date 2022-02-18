@@ -10,12 +10,10 @@ import net.crmly.utilities.BrowserUtils;
 import net.crmly.utilities.ConfigurationReader;
 import net.crmly.utilities.Driver;
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
-
 import java.util.List;
 
 public class PollTabStepDefs {
-PollTabPage pollTabPage = new PollTabPage();
+    PollTabPage pollTabPage = new PollTabPage();
 
     @Given("the user successfully navigates to the Homepage")
     public void the_user_successfully_navigates_to_the_Homepage() throws InterruptedException {

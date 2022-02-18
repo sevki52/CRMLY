@@ -25,11 +25,13 @@ public class LinkStepDefs {
         pollTabPage.linkUrl.sendKeys("https://qa.crmly.net/stream/");
         BrowserUtils.waitFor(2);
     }
+
     @And("the user clicks Save button.")
     public void the_user_clicks_Save_button() {
         pollTabPage.saveBtn.click();
         BrowserUtils.waitFor(2);
     }
+
     @Then("verify the link text in the message header as written")
     public void verify_the_link_text_in_the_message_header_as_written() {
         String actualMsg = "CRM 24";
