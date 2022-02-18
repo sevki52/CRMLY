@@ -82,10 +82,11 @@ public class PollTabPage extends BasePage {
     @FindBy(id = "blog-submit-button-save")
     public WebElement sendBtn;
 
+    @FindBy(xpath = "//*[@id='blg-post-737']")
+    public WebElement message;
 
-
-
-
+    @FindBy(xpath = "//*[@id='vote-nSLjLH8']")
+    public WebElement msgBady;
 
     public void actualtitle() {
         BrowserUtils.waitFor(3);
@@ -93,6 +94,11 @@ public class PollTabPage extends BasePage {
         Assert.assertEquals("(10) Portal",actualTitle);
     }
 
+//    public void getLastItem(String comment) {
+//        msgBady.get(commentList.size() - 1).sendKeys(comment);
+//        BrowserUtils.waitForClickability(submitCommentList.get(submitCommentList.size() - 1), 5);
+//        submitCommentList.get(submitCommentList.size() - 1).click();
 
+    //}}
 
 }

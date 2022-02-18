@@ -6,6 +6,7 @@ import io.cucumber.java.en.When;
 import net.crmly.pages.PollTabPage;
 import net.crmly.utilities.BrowserUtils;
 import net.crmly.utilities.Driver;
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
@@ -17,10 +18,10 @@ public class Q_AsStepDefs {
 
     @When("the user writes message title")
     public void the_user_writes_message_title() {
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitFor(2);
         Driver.get().switchTo().frame(0);
         pollTabPage.messageBody.clear();
-        pollTabPage.messageBody.sendKeys("Questions and Answer");
+        pollTabPage.messageBody.sendKeys("Questions and Answers");
         Driver.get().switchTo().defaultContent();
      }
 
@@ -53,6 +54,7 @@ public class Q_AsStepDefs {
     }
     @Then("verify the message box")
     public void verify_the_message_box() {
-
+        Assert.assertTrue(pollTabPage.message.isDisplayed());
+        //Assert.assertTrue(pollTabPage.msgBady.isDisplayed());
     }
 }
