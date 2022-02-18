@@ -4,7 +4,7 @@ Feature: Add Questions and Answers
     Given the user successfully navigates to the Homepage.
     @CRMLYEUG-835
     Scenario: Add Questions and Answers
-      When the user clicks Poll tab on the homepage
+      Given the user clicks Poll tab on the homepage
       And the user writes message title
       And the user clicks Add question button
       And the user adds questions

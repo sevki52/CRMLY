@@ -63,11 +63,11 @@ public class PollTabPage extends BasePage {
     @FindBy(linkText = "Add question")
     public WebElement addQuestionBtn;
 
-    @FindBy(id = "question_1")
-    public WebElement addQuestionTwo;
-
     @FindBy(id = "question_0")
     public WebElement questionOne;
+
+    @FindBy(id = "question_1")
+    public WebElement addQuestionTwo;
 
     @FindBy(id = "answer_0__0_")
     public WebElement q1Ans1;
@@ -95,8 +95,12 @@ public class PollTabPage extends BasePage {
 
     @FindBy(css = "#multi_0")
     public  WebElement checkBoxBtn1;
+
     @FindBy(css = "#multi_1")
     public  WebElement checkBoxBtn2;
+
+    @FindBy(xpath = "//*[@id='BXSocNetLogDestination']/span[1]")
+    public WebElement closeBtn;
 
 
 

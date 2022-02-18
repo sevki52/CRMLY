@@ -20,8 +20,7 @@ public class AddMentionStepDefs {
         Driver.get().get(url);
         new LoginPage().login();
     }
-
-    @When("the user clicks Poll tab on the homepage.")
+    @Given("the user clicks Poll tab on the homepage.")
     public void the_user_clicks_Poll_tab_on_the_homepage() {
         pollTabPage.pollTab.click();
         BrowserUtils.waitFor(3);

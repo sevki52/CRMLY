@@ -31,9 +31,9 @@ public class Q_AsStepDefs {
 
     @And("the user adds questions")
     public void the_user_adds_questions() {
-        BrowserUtils.waitFor(1);
+        BrowserUtils.waitFor(3);
         pollTabPage.questionOne.sendKeys("What is your name?");
-        BrowserUtils.waitFor(1);
+        BrowserUtils.waitFor(3);
         pollTabPage.addQuestionTwo.sendKeys("Where are you from?");
     }
 
@@ -46,7 +46,7 @@ public class Q_AsStepDefs {
 
     }
 
-    @When("the user clicks Send button")
+    @And("the user clicks Send button")
     public void the_user_clicks_Send_button() {
         pollTabPage.sendBtn.click();
         BrowserUtils.waitFor(5);

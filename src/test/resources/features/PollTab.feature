@@ -3,9 +3,10 @@ Feature: Selecting multiple contacts
 
   Background:
     Given the user successfully navigates to the Homepage
+
   @CRMLYEUG-819
   Scenario: Selecting multiple contacts.
-    Then the user is on home page
+    Given the user is on home page
     When the user clicks Poll tab on the homepage
     And the user  clicks All employees under the pool tab
     And the user clicks on employees and departments on the right side

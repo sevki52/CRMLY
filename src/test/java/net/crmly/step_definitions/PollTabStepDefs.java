@@ -45,13 +45,12 @@ public class PollTabStepDefs {
     }
     @And("the user selects multiple contacts from Employees and Departments contact lists")
     public void the_user_selects_multiple_contacts_from_Employees_and_Departments_contact_lists() {
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(5);
         pollTabPage.contactsOne.click();
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(5);
         pollTabPage.contactsTwo.click();
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(5);
         pollTabPage.contactsThree.click();
-
     }
     @And("the user closes the contact lists window")
     public void the_user_closes_the_contact_lists_window() {
