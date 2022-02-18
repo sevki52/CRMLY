@@ -23,7 +23,7 @@ public class Q_AsStepDefs {
 
     @And("the user clicks Add question button")
     public void the_user_clicks_Add_question_button() {
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(4);
         BrowserUtils.scrollToElement(pollTabPage.addQuestionBtn);
         pollTabPage.addQuestionBtn.click();
         BrowserUtils.waitFor(2);
@@ -46,15 +46,17 @@ public class Q_AsStepDefs {
 
     }
 
-    @When("the user clicks Send button")
-    public void the_user_clicks_Send_button() {
-        pollTabPage.sendBtn.click();
-        BrowserUtils.waitFor(10);
-    }
+//    @When("the user clicks Send button")
+//    public void the_user_clicks_Send_button() {
+//        pollTabPage.sendBtn.click();
+//        BrowserUtils.waitFor(10);
+//    }
 
     @Then("verify the message box")
     public void verify_the_message_box() {
-        Assert.assertTrue(pollTabPage.message.isDisplayed());
-        //Assert.assertTrue(pollTabPage.msgBady.isDisplayed());
+        Assert.assertTrue(pollTabPage.questionOne.isDisplayed());
+        Assert.assertTrue(pollTabPage.addQuestionTwo.isDisplayed());
+        Assert.assertTrue(pollTabPage.q1Ans1.isDisplayed());
+        Assert.assertTrue(pollTabPage.q1Ans2.isDisplayed());
     }
 }

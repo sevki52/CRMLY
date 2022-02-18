@@ -9,6 +9,6 @@ Feature: Add Questions and Answers
       And the user clicks Add question button
       And the user adds questions
       And the user gives multiple answers
-      And the user clicks Send button
+#      And the user clicks Send button
       Then verify the message box
 
