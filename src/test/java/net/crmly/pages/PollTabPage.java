@@ -38,7 +38,7 @@ public class PollTabPage extends BasePage {
     public WebElement attachBtn;
 
     @FindBy(id = "linkidPostFormLHE_blogPostForm-text")
-    public WebElement linkTest;
+    public WebElement linkText;
 
     @FindBy(id = "linkidPostFormLHE_blogPostForm-href")
     public WebElement linkUrl;
@@ -48,10 +48,40 @@ public class PollTabPage extends BasePage {
 
     @FindBy(id = "bx-b-mention-blogPostForm")
     public WebElement addMention;
+
     @FindBy(className = "bx-finder-box-item-t7-name")
     public WebElement firstMention;
+
     @FindBy(css = "a[href='#U693']")
     public WebElement secondMention;
+
+    @FindBy(tagName = "iframe")
+    public WebElement msgIframe;
+
+    @FindBy(xpath = "//html/body")
+    public WebElement messageBody;
+
+    @FindBy(linkText= "Add question")
+    public WebElement addQuestionBtn;
+    @FindBy(id = "question_1")
+    public WebElement addQuestionTwo;
+
+    @FindBy(id = "question_0")
+    public WebElement questionOne;
+    @FindBy(id = "question_1")
+    public WebElement questionTwo;
+    @FindBy(id = "answer_0__0_")
+    public WebElement q1Ans1;
+    @FindBy(id = "answer_0__1_")
+    public WebElement q1Ans2;
+    @FindBy(id = "answer_1__0_")
+    public WebElement q2AnswerOne;
+    @FindBy(id = "answer_1__1_")
+    public WebElement q2AnswerTwo;
+
+    @FindBy(id = "blog-submit-button-save")
+    public WebElement sendBtn;
+
 
 
 

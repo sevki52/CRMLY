@@ -20,8 +20,7 @@ public class LinkStepDefs {
 
     @And("the user fills in the fields with link text and link url.")
     public void the_user_fills_in_the_fields_with_link_text_and_link_url() {
-
-        pollTabPage.linkTest.sendKeys("CRM 24");
+        pollTabPage.linkText.sendKeys("CRM 24");
         BrowserUtils.waitFor(3);
         pollTabPage.linkUrl.sendKeys("https://qa.crmly.net/stream/");
         BrowserUtils.waitFor(2);
