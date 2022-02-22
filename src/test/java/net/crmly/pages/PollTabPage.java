@@ -18,7 +18,7 @@ public class PollTabPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"feed-add-post-destination-item\"]/span/span[1]")
     public WebElement allEmployeesBtn;
 
-    @FindBy(css = "a[href='#switchTab']:nth-child(2)")
+    @FindBy(css = "a[href='#switchTab']:nth-child(3)")
     public WebElement empsAndDepsTab;
 
     @FindBy(css = "a[href='#U772']")
