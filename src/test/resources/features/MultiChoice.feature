@@ -11,6 +11,6 @@ Feature: Delete Questions and Answers
     And the user adds questions
     And the user gives multiple answers
     And the user clicks Allow multiple choice button
-    And the user clicks Send button
-    Then the user sees blue thick on checkbox
+    Then the user clicks Send button
+
 

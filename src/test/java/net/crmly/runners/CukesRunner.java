@@ -7,12 +7,12 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"json:target/cucumber.json",
-                "html:target/default-html-reports",
+                "html:target/cucumber-report.html",
                 "rerun:target/rerun.txt"},
         features = "src/test/resources/features",
         glue = "net/crmly/step_definitions",
         dryRun = false,
-        tags = "@CRMLYEUG-850"
+        tags = ""
 )
 public class CukesRunner {
 }

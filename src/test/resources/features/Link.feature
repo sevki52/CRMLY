@@ -1,4 +1,4 @@
-
+@
   Feature: Attach a link by clicking on the link icon
 
     Background:

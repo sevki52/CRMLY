@@ -23,13 +23,13 @@ public class AddMentionStepDefs {
     @Given("the user clicks Poll tab on the homepage.")
     public void the_user_clicks_Poll_tab_on_the_homepage() {
         pollTabPage.pollTab.click();
-        BrowserUtils.waitFor(3);
     }
 
     @And("the user clicks on the Add mention.")
     public void the_user_clicks_on_the_Add_mention() {
+        BrowserUtils.waitForClickablility(pollTabPage.addMention,5);
         pollTabPage.addMention.click();
-        BrowserUtils.waitFor(3);
+
     }
 
     @And("the user selects by clicking on employees from Recent.")

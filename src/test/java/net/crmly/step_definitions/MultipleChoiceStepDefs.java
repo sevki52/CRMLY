@@ -18,12 +18,12 @@ public class MultipleChoiceStepDefs {
 
     }
 
-    @Then("the user sees blue thick on checkbox")
-    public void the_user_sees_blue_thick_on_checkbox() {
-        BrowserUtils.waitFor(6);
-        Assert.assertTrue(pollTabPage.checkBoxBtn1.isEnabled());
-        BrowserUtils.waitFor(6);
-        Assert.assertTrue(pollTabPage.checkBoxBtn2.isEnabled());
-
-    }
+//    @Then("the user sees blue thick on checkbox")
+//    public void the_user_sees_blue_thick_on_checkbox() {
+//        BrowserUtils.waitFor(6);
+//        Assert.assertTrue(pollTabPage.checkBoxBtn1.isEnabled());
+//        BrowserUtils.waitFor(6);
+//        Assert.assertTrue(pollTabPage.checkBoxBtn2.isEnabled());
+//
+//    }
 }

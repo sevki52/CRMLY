@@ -17,7 +17,7 @@ public class Q_AsStepDefs {
         BrowserUtils.waitFor(3);
         Driver.get().switchTo().frame(0);
         pollTabPage.messageBody.clear();
-        pollTabPage.messageBody.sendKeys("Questions and answers");
+        pollTabPage.messageBody.sendKeys("Questions and Answers");
         Driver.get().switchTo().defaultContent();
     }
 
